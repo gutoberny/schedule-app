@@ -42,6 +42,16 @@ export default async function Home() {
           })}
         </div>
       </div>
+
+      <div className="mt-6 mb-[4.75rem]">
+        <h2 className="px-5 text-xs uppercase text-gray-400 mb-3">Populares</h2>
+
+        <div className="flex px-5 gap-4 overflow-x-auto [&::-webkit-scrollbar]:hidden">
+          {fields.map((field) => {
+            return <FieldItem field={field} key={field.id} />;
+          })}
+        </div>
+      </div>
     </div>
   );
 }
